@@ -6,7 +6,7 @@ A simple fullstack web application built with React that displays categorized fa
   Category-based fact display
   Voting system: 👍 🤯 ⛔️
   Gradient-styled category buttons
-  Mobile-friendly and responsive UI
+  Responsive UI
 
 # Tech Stack : 
 
