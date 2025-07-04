@@ -1,0 +1,354 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fdf6e3;
+  color: #1e1e1e;
+  padding: 48px 64px 0px;
+}
+
+h1 {
+  font-size: 42px;
+  text-transform: uppercase;
+  font-family: "Coiny", sans-serif;
+  line-height: 1;
+  margin-top: 6px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.disputed {
+  color: #ef4444;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.message {
+  font-size: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 24px;
+}
+
+.root {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 48px;
+  height: calc(100vh - 48px - 68px - 40px);
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
+
+section {
+  overflow: scroll;
+  padding-bottom: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.logo img {
+  width: 68px;
+  height: 68px;
+}
+
+.vote-buttons {
+  margin-left: auto;
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+}
+.vote-buttons button {
+  background-color: #e0e0e0;
+  border: none;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.vote-buttons button:hover {
+  background-color: #cccccc;
+}
+
+.vote-buttons button:disabled {
+  background-color: #dddddd;
+}
+
+.fact {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 20px;
+  line-height: 1.4;
+  font-family: "Sono", sans-serif;
+  background-color: #f5f5f5;
+  margin-bottom: 16px;
+  padding: 16px 30px;
+  letter-spacing: -1px;
+  border-radius: 16px;
+}
+@media (max-width: 1200px) {
+  .fact {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-end;
+  }
+}
+
+.tag {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Coiny", sans-serif;
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: red;
+  border-radius: 100px;
+}
+
+ul {
+  list-style: none;
+}
+
+.category {
+  margin-bottom: 16px;
+}
+
+.source:link,
+.source:visited {
+  color: #4b5563;
+  text-decoration: none;
+  margin-left: 12px;
+  transition: 0.3s;
+}
+
+.source:hover,
+.source:active {
+  color: #3b82f6;
+}
+
+.btn {
+  border: none;
+  font-family: "Coiny", sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding: 16px 0px 13px;
+  background-image: linear-gradient(135deg, #000046, #1cb5e0);
+  color: inherit;
+  transition: 0.3s;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(110%) rotate(-2deg);
+}
+
+.btn-large {
+  font-size: 30px;
+  padding: 20px 32px 17px;
+}
+
+.btn-all-categories {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.btn-category {
+  width: 100%;
+  background-image: none;
+}
+
+.fact-form {
+  background-color: #f0f0f0;
+  margin-bottom: 40px;
+  padding: 16px 32px;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 16px;
+}
+
+.fact-form input,
+.fact-form select {
+  width: 220px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 100px;
+  font-size: 18px;
+  color: inherit;
+  padding: 16px;
+}
+
+.fact-form input:first-child {
+  flex-grow: 1;
+}
+
+.fact-form input::placeholder {
+  color: #9ca3af;
+}
+
+.fact-form span {
+  font-weight: 600px;
+  font-size: 18px;
+  margin-right: 18px;
+  font-family: inherit;
+}
+
+@media (max-width: 1000px) {
+  body {
+    padding: 32px 48px;
+  }
+  .fact-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .fact-form input,
+  .fact-form select {
+    width: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: 24px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .fact-form {
+    padding: 16px;
+  }
+
+  .fact {
+    padding: 12px 16px;
+  }
+}
+
+/* 🌙 Dark Mode Overrides */
+body.dark-mode {
+  background-color: #121212;
+  color: #fafaf9;
+}
+
+body.dark-mode .header,
+body.dark-mode .main,
+body.dark-mode .fact,
+body.dark-mode .fact-form,
+body.dark-mode .btn,
+body.dark-mode .btn-category,
+body.dark-mode .btn-all-categories {
+  background-color: #1e1e1e;
+  color: #fafaf9;
+}
+
+body.dark-mode .vote-buttons button {
+  background-color: #333;
+}
+
+body.dark-mode .vote-buttons button:hover {
+  background-color: #555;
+}
+
+body.dark-mode .vote-buttons button:disabled {
+  background-color: #444;
+}
+
+body.dark-mode .fact-form input,
+body.dark-mode .fact-form select {
+  background-color: #333;
+  color: #fafaf9;
+}
+
+body.dark-mode .source:link,
+body.dark-mode .source:visited {
+  color: #a8a29e;
+}
+
+body.dark-mode .source:hover {
+  color: #60a5fa;
+}
+
+.btn-dark-toggle {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: "Coiny", sans-serif;
+  text-transform: uppercase;
+}
+
+body.dark-mode .btn-dark-toggle {
+  background-color: #333;
+  color: #fafaf9;
+}
+
+/* 🔍 Search Button */
+.btn-search {
+  padding: 10px 24px;
+  font-size: 16px;
+  font-family: "Coiny", sans-serif;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 100px;
+  background-color: #1cb5e0;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-search:hover {
+  background-color: #009ec3;
+  transform: scale(1.05);
+}
+
+body.dark-mode .btn-search {
+  background-color: #444;
+  color: #fafaf9;
+}
+
+body.dark-mode .btn-search:hover {
+  background-color: #666;
+}
